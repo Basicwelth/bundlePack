@@ -1,4 +1,11 @@
 import "./components/example";
+import {ModuleFunc, ModuleClass} from "./components/ModuleFunc";
+
+ModuleFunc.init();
+ModuleFunc.second();
+const myClass = new ModuleClass();
+myClass.second();
+myClass.three();
 let snack = 'Meow Mix';
 
 function getFood(food) {
@@ -44,7 +51,7 @@ let [a, b, c, d] = [1, 2, 3, 4];
 console.log(a); // 1
 console.log(b); // 2
 
-let luke = { occupation: 'jedi', father: 'anakin' };
+let luke = {occupation: 'jedi', father: 'anakin'};
 let {occupation, father} = luke;
 
 console.log(occupation); // 'jedi'
@@ -65,9 +72,10 @@ let api = {
 
 export default api;
 
-function addTwoNumbers(x=0, y=0) {
+function addTwoNumbers(x = 0, y = 0) {
     return x + y;
 }
+
 addTwoNumbers(2, 4); // 6
 addTwoNumbers(2); // 2
 addTwoNumbers(); // 0
@@ -79,7 +87,7 @@ function logArguments(...args) {
 }
 
 function initializeCanvas(
-    { height=600, width=400, lineStroke='black'} = {}) {
+    {height = 600, width = 400, lineStroke = 'black'} = {}) {
 }
 
 Math.max(...[-1, 100, 9001, -32]); // 9001
@@ -89,8 +97,8 @@ let places = ['Miami', ...cities, 'Chicago']; // ['Miami', 'San Francisco', 'Los
 
 class Person {
     constructor(name, age, gender) {
-        this.name   = name;
-        this.age    = age;
+        this.name = name;
+        this.age = age;
         this.gender = gender;
     }
 
@@ -112,3 +120,5 @@ class Personal extends Person {
         console.log(this.age);
     }
 }
+
+ModuleFunc.three();

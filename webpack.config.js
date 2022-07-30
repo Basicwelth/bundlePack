@@ -7,7 +7,6 @@ module.exports = {
             linkType: "text/css",
         }),
     ],
-    // entry: ["/src/index.js", "/src/output.css"],
     entry: {
         appBundleTest: ["./src/index.js", "./src/output.css"],
     },
@@ -17,10 +16,11 @@ module.exports = {
         clean: true,
         compareBeforeEmit: true,
     },
+    devtool: "inline-source-map",
     module: {
         rules: [
             {
-                test: /\.(js|jsx|tsx|ts)$/i,
+                test: /\.(js|jsx|ts|tsx)$/i,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader"
@@ -37,7 +37,7 @@ module.exports = {
                     {
                         loader: "url-loader",
                         options: {
-                            limit: 10000,
+                            limit: false,
                         }
                     }
                 ]
@@ -45,7 +45,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.tsx', '.ts'],
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
     },
     optimization: {
         // minimize: true,

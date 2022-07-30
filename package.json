@@ -1,6 +1,6 @@
 {
   "name": "testappPHP",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Тестовое приложение с отдельным scss компилятором",
   "main": "index.js",
   "dependencies": {
@@ -15,6 +15,7 @@
     "is-extglob": "^2.1.1",
     "is-glob": "^4.0.3",
     "is-number": "^7.0.0",
+    "jquery": "^3.6.0",
     "normalize-path": "^3.0.0",
     "picomatch": "^2.3.1",
     "readdirp": "^3.6.0",
@@ -23,9 +24,11 @@
     "typescript": "^4.7.4"
   },
   "scripts": {
-    "test": "compileStylesWindows.bat",
-    "start": "compileStylesWindows.bat && webpack --mode development",
-    "build": "compileStylesWindows.bat && webpack --mode production"
+    "styles": "compileStylesWindows.bat",
+    "devjs": "webpack --mode development",
+    "prodjs": "webpack --mode production",
+    "devfull": "npm run styles && npm run devjs",
+    "prodfull": "npm run styles && npm run prodjs"
   },
   "author": "ivanov_as",
   "license": "ISC",
