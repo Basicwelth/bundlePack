@@ -77,4 +77,9 @@ module.exports = {
             chunks: 'async',
         },
     },
+    performance: {
+        hints: 'error',
+        maxEntrypointSize: 14000000,
+        maxAssetSize: 14000000
+    }
 };

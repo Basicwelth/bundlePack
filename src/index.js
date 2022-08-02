@@ -125,4 +125,4 @@ class Personal extends Person {
     }
 }
 
-ModuleFunc.three();
+ModuleObject.three();
