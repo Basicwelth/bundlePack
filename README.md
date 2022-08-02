@@ -48,7 +48,5 @@ h1 {
 sass --style=compressed style.scss
 ```
 ```css
-h1 {
-    font-size: 40px
-}
+h1 {font-size: 40px}
 ```
