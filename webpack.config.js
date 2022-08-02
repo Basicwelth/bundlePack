@@ -23,7 +23,23 @@ module.exports = {
                 test: /\.(js|jsx|ts|tsx)$/i,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader"
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            [
+                                "@babel/preset-env",
+                                {
+                                    targets: {
+                                        edge: "14",
+                                        firefox: "55",
+                                        chrome: "50",
+                                        safari: "10"
+                                    }
+                                }
+                            ]
+                        ],
+                        plugins: ["transform-typescript"]
+                    }
                 },
             },
             {
@@ -56,5 +72,9 @@ module.exports = {
         //     }),
         // ],
         removeEmptyChunks: true,
+        portableRecords: true,
+        splitChunks: {
+            chunks: 'async',
+        },
     },
 };

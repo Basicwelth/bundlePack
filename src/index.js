@@ -1,11 +1,15 @@
 import "./components/example";
-import {ModuleFunc, ModuleClass} from "./components/ModuleFunc";
+import {ModuleFunc, ModuleClass, NewModule, FuncModule} from "./components/ModuleFunc";
 
 ModuleFunc.init();
 ModuleFunc.second();
 const myClass = new ModuleClass();
 myClass.second();
 myClass.three();
+const extClass = new NewModule();
+extClass.init();
+const console = window.console;
+FuncModule();
 let snack = 'Meow Mix';
 
 function getFood(food) {
