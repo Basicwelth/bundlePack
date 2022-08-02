@@ -1,6 +1,6 @@
 {
   "name": "testappPHP",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Тестовое приложение с отдельным scss компилятором",
   "main": "index.js",
   "dependencies": {
