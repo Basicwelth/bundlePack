@@ -1,8 +1,8 @@
 import "./components/example";
-import {ModuleFunc, ModuleClass, NewModule, FuncModule} from "./components/ModuleFunc";
+import {ModuleObject, ModuleClass, NewModule, FuncModule} from "./components/Modules";
 
-ModuleFunc.init();
-ModuleFunc.second();
+ModuleObject.init();
+ModuleObject.second();
 const myClass = new ModuleClass();
 myClass.second();
 myClass.three();

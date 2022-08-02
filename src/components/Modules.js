@@ -1,4 +1,4 @@
-export const ModuleFunc = {
+export const ModuleObject = {
     $: require("jquery/dist/jquery.slim.min"),
     init: function () {
         console.log("Start Func");
