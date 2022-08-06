@@ -1,6 +1,6 @@
 {
   "name": "testappPHP",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Тестовое приложение с отдельным scss компилятором",
   "main": "index.js",
   "dependencies": {
@@ -16,6 +16,7 @@
     "is-glob": "4.0.3",
     "is-number": "7.0.0",
     "jquery": "3.6.0",
+    "jquery-ui-bundle": "1.12.1-migrate",
     "normalize-path": "3.0.0",
     "picomatch": "2.3.1",
     "readdirp": "3.6.0",
@@ -35,11 +36,11 @@
   "devDependencies": {
     "@babel/cli": "7.18.6",
     "@babel/core": "7.18.6",
+    "@babel/plugin-transform-typescript": "7.18.6",
     "@babel/preset-env": "7.18.6",
     "@babel/preset-typescript": "7.18.6",
     "autoprefixer": "10.4.7",
     "babel-loader": "8.2.5",
-    "babel-plugin-transform-typescript": "7.0.0-beta.3",
     "clean-css": "5.3.0",
     "css-loader": "6.7.1",
     "css-minimizer-webpack-plugin": "4.0.0",
