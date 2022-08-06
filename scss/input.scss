@@ -29,4 +29,10 @@ span, a, abbr {
 .column{
   flex-direction: column;
 }
+#app {
+  width: 100px;
+  height: 100px;
+  background: #ccc;
+  border: 1px solid #000;
+}
 @import "componets/button";
