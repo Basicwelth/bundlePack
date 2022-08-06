@@ -50,3 +50,7 @@ sass --style=compressed style.scss
 ```css
 h1 {font-size: 40px}
 ```
+#### Установка пакетов
+```shell
+npm ci
+```
