@@ -1,5 +1,5 @@
 export const ModuleObject = {
-    $: require("jquery/dist/jquery.slim.min"),
+    myParam: "TEST!",
     init: function () {
         console.log("Start Func");
     },
@@ -8,7 +8,7 @@ export const ModuleObject = {
         this.init();
     },
     three: function () {
-        console.log(this.$("#app"));
+        console.log(this.myParam);
     }
 }
 
@@ -21,8 +21,8 @@ export class ModuleClass {
     }
 
     params = {
-        $: require("jquery/dist/jquery.slim.min"),
-        minJ: require("jquery/dist/jquery.min")
+        one: "First parameter",
+        two: `Second parameter`
     }
 
     init() {
@@ -35,7 +35,7 @@ export class ModuleClass {
     }
 
     three() {
-        window.console.log(this.params.$("#app"));
+        window.console.log(this.params.two);
     }
 }
 
@@ -59,6 +59,5 @@ export class NewModule extends ModuleClass {
 }
 
 export function FuncModule() {
-    const $ = require("jquery/dist/jquery")
     console.log($("#app"))
 }

@@ -1,6 +1,10 @@
+import "jquery-ui-bundle";
 import "./components/example";
 import {ModuleObject, ModuleClass, NewModule, FuncModule} from "./components/Modules";
 
+$(document).click(function() {
+    $('#app').effect( "bounce", "slow" );
+});
 ModuleObject.init();
 ModuleObject.second();
 const myClass = new ModuleClass();
