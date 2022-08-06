@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
@@ -5,6 +6,12 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].min.css',
             linkType: "text/css",
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery'",
+            "window.$": "jquery"
         }),
     ],
     entry: {
@@ -38,7 +45,7 @@ module.exports = {
                                 }
                             ]
                         ],
-                        plugins: ["transform-typescript"]
+                        plugins: ["@babel/plugin-transform-typescript"]
                     }
                 },
             },
